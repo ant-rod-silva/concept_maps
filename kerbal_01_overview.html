@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kerbal Space Program - Overview</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body style="background-color: white">
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+<pre class="mermaid">
+  graph TD
+    No_Raiz["KERBAL\nSPACE PROGRAM\n(KSP)"] --> Lig_E_um[é um] 
+
+    Lig_E_um --> No_Jogo_Elet[jogo\neletrônico]
+    No_Jogo_Elet --> Lig_Do_Tipo[do tipo]
+    Lig_Do_Tipo --> NoTerm[simulador]
+    No_Jogo_Elet --> Lig_Lancado_Em[lançado\nem]
+    Lig_Lancado_Em --> No_2015[2015]
+    No_Jogo_Elet --> Lig_Jogo_Elet_Para[para]
+    Lig_Jogo_Elet_Para --> No_PC[PC]
+    Lig_Jogo_Elet_Para --> No_PS[PS]
+    Lig_Jogo_Elet_Para --> No_Xbox[XBOX]
+
+    No_Raiz --> Lig_Tem_Modos[tem como\nmodos]
+    Lig_Tem_Modos --> No_Modo_Sandbox[Sandbox]
+    Lig_Tem_Modos --> No_Modo_Ciencia[Ciência]
+    Lig_Tem_Modos --> No_Modo_Carreira[Carreira]
+    No_Modo_Sandbox --> Lig_Dificuldades[Que podem ser\njogados na\ndificuldade]
+	No_Modo_Ciencia --> Lig_Dificuldades
+	No_Modo_Carreira --> Lig_Dificuldades
+	Lig_Dificuldades --> No_Facil[Fácil]
+	Lig_Dificuldades --> No_Normal[Normal]
+	Lig_Dificuldades --> No_Moderado[Moderado]
+	Lig_Dificuldades --> No_Personalizado[Personalizado]
+	Lig_Dificuldades --> No_Dificil[Difícil]
+
+    No_Raiz ---> Lig_Voltado_Para[está voltado\npara]
+    Lig_Voltado_Para --> No_Exp_Esp[exploração\nespacial]
+	
+	No_Exp_Esp --> Lig_Partindo_De[partindo\nde um]
+	Lig_Partindo_De --> No_Centro_Espacial[Centro Espacial]
+	No_Centro_Espacial --> Lig_Que_Contem[que contém]
+	Lig_Que_Contem --> No_VAB[Vehicle\nAssembly\nBuilding]
+	Lig_Que_Contem --> No_LP[Launch\npad]
+	Lig_Que_Contem --> No_SPH[Space\nPlane\nHangar]
+	Lig_Que_Contem --> No_RW[Runway]
+	Lig_Que_Contem --> No_TS[Tracking\nStation]
+	Lig_Que_Contem --> No_AC[Astronaut\nComplex]
+
+    Lig_De --> No_Planetas[Planetas]
+    No_Planetas --> Lig_Planetas_Como[como]
+    Lig_Planetas_Como --> Moho[Moho]
+    Lig_Planetas_Como --> Eve[Eve]
+    Lig_Planetas_Como --> Duna[Duna]
+    Lig_Planetas_Como --> Jool[Jool]
+    Lig_Planetas_Como --> Kerbin[Kerbin]
+
+    Kerbin --> Lig_Kerbin_Habitados_Por[habitados\npor]
+    Lig_Kerbin_Habitados_Por --> Kerbals[Kerbals]
+
+    No_Exp_Esp --> Lig_De[De]
+    Lig_De --> No_Estrelas[Estrelas]
+    No_Estrelas --> Lig_Estrelas_Como[como]
+    Lig_Estrelas_Como --> Kerbol[Kerbol]
+
+    Lig_De --> No_Planetas_Anoes[Planetas-anões]
+    No_Planetas_Anoes --> Lig_Planetas_Anoes_Como[como]
+    Lig_Planetas_Anoes_Como --> Eeloo[Eeloo]
+    Lig_Planetas_Anoes_Como --> Dres[Dres]
+
+    Lig_De ---> No_Satelites[Satélites]
+    No_Satelites --> Lig_Satelites_Como[como]
+    Lig_Satelites_Como --> Mun[Mun]
+
+    No_Exp_Esp --> Lig_Usando[usando]
+    Lig_Usando --> No_Foguetes[foguetes]
+
+    No_Foguetes --> Lig_Operados_por[operados\npor]
+    Lig_Operados_por --> Kerbals
+	
+	No_Foguetes --> Lig_Que_Levam[Que levam]
+    Lig_Que_Levam --> No_Aeronaves[aeronaves\nespaciais]
+    Lig_Que_Levam --> No_Rovers[rovers]
+    Lig_Que_Levam --> No_Experimentos_Cientificos[experimentos\ncientíficos]
+	
+	No_Planetas --> Lig_Que_Orbitam_Estrelas[Que orbitam]
+	No_Planetas_Anoes --> Lig_Que_Orbitam_Estrelas
+	Lig_Que_Orbitam_Estrelas --> No_Estrelas
+
+	No_Satelites --> Lig_Que_Orbitam_Planetas[Que orbitam]
+	Lig_Que_Orbitam_Planetas --> No_Planetas
+
+    style Lig_E_um fill:transparent,stroke:none,stroke-width:0
+    style Lig_Do_Tipo fill:transparent,stroke:none,stroke-width:0
+    style Lig_Voltado_Para fill:transparent,stroke:none,stroke-width:0
+    style Lig_De fill:transparent,stroke:none,stroke-width:0
+    style Lig_Usando fill:transparent,stroke:none,stroke-width:0
+    style Lig_Tem_Modos fill:transparent,stroke:none,stroke-width:0
+    style Lig_Estrelas_Como fill:transparent,stroke:none,stroke-width:0
+    style Lig_Planetas_Como fill:transparent,stroke:none,stroke-width:0
+    style Lig_Planetas_Anoes_Como fill:transparent,stroke:none,stroke-width:0
+    style Lig_Satelites_Como fill:transparent,stroke:none,stroke-width:0
+    style Lig_Jogo_Elet_Para fill:transparent,stroke:none,stroke-width:0
+    style Lig_Lancado_Em fill:transparent,stroke:none,stroke-width:0
+    style Lig_Kerbin_Habitados_Por fill:transparent,stroke:none,stroke-width:0
+    style Lig_Dificuldades fill:transparent,stroke:none,stroke-width:0
+    style Lig_Partindo_De fill:transparent,stroke:none,stroke-width:0
+    style Lig_Que_Contem fill:transparent,stroke:none,stroke-width:0
+    style Lig_Que_Orbitam_Estrelas fill:transparent,stroke:none,stroke-width:0
+    style Lig_Que_Orbitam_Planetas fill:transparent,stroke:none,stroke-width:0
+
+	
+
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kerbal Space Program - Viagem Espacial</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body style="background-color:white">
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+<pre class="mermaid">
+
+  graph LR
+    No_Raiz["KERBAL SPACE PROGRAM\n(KSP)"] --> Lig_Permite_Realizar[permite\nrealizar] 
+
+    Lig_Permite_Realizar --> No_Viagem_Espacial[viagem\nespacial]
+	
+	No_Viagem_Espacial ---> Lig_Viagem_Espacial_Usando[usando]
+	Lig_Viagem_Espacial_Usando --> No_Foguete[foguete]
+
+	No_Foguete --> Lig_Abastecido_Por[abastecido por]
+	Lig_Abastecido_Por --> No_Combustivel_Solido[combustível\nsólido]
+	Lig_Abastecido_Por --> No_Combustivel_Liquido[combustível\nlíquido]
+	Lig_Abastecido_Por --> No_Combustivel_Monopropelente[Monopropelente]
+	Lig_Abastecido_Por --> No_Combustivel_Xenonio[Gás\nxenônio]
+
+	No_Foguete --> Lig_Transporta[que transporta]
+	Lig_Transporta --> No_Kerbonautas[Kerbonautas]
+	Lig_Transporta --> No_Naves[Naves]
+	Lig_Transporta --> No_Hovers[Hovers]
+	Lig_Transporta --> No_Exp_Cient[Experimentos\ncientíficos]
+	
+	No_Kerbonautas --> Lig_Kerbonautas_Adquirem[que adquirem]
+	Lig_Kerbonautas_Adquirem --> No_Dinheiro[Dinheiro]
+	Lig_Kerbonautas_Adquirem --> No_Ciencia[Ciência]
+	Lig_Kerbonautas_Adquirem --> No_Reputacao[Reputação]
+
+	No_Viagem_Espacial --> Lig_Viagem_Espacial_Para[para]
+	Lig_Viagem_Espacial_Para --> No_Corpos_Celestes[corpos celestes]
+	
+	No_Kerbonautas --> Lig_Kerbonautas_Tipo[do tipo]
+	Lig_Kerbonautas_Tipo --> No_Piloto[piloto]
+	Lig_Kerbonautas_Tipo --> No_Cientista[cientista]
+	Lig_Kerbonautas_Tipo --> No_Engenheiro[engenheiro]	
+	
+	No_Foguete --> Lig_Foguete_Tipo[do tipo]
+	Lig_Foguete_Tipo --> No_Modular[modular]
+
+    style Lig_Permite_Realizar fill:transparent,stroke:none,stroke-width:0
+    style Lig_Viagem_Espacial_Usando fill:transparent,stroke:none,stroke-width:0
+    style Lig_Abastecido_Por fill:transparent,stroke:none,stroke-width:0
+    style Lig_Transporta fill:transparent,stroke:none,stroke-width:0
+    style Lig_Kerbonautas_Adquirem fill:transparent,stroke:none,stroke-width:0
+    style Lig_Viagem_Espacial_Para fill:transparent,stroke:none,stroke-width:0
+    style Lig_Kerbonautas_Tipo fill:transparent,stroke:none,stroke-width:0
+    style Lig_Foguete_Tipo fill:transparent,stroke:none,stroke-width:0
+
+</pre>
+
+</body>
+</html>

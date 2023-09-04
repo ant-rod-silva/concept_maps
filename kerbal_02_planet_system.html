@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kerbal Space Program - Sist. Planetário</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body style="background-color:white">
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+<pre class="mermaid">
+
+  graph TD
+    No_Raiz["KERBAL SPACE PROGRAM\n(KSP)"] --> Lig_Possui_Um[possui um] 
+
+    Lig_Possui_Um --> No_Sistema_Planetario[sistema planetário]
+	
+    No_Sistema_Planetario --> Lig_Composto_Por[composto por]	
+    Lig_Composto_Por --> No_Asteroides[Asteróides]
+    Lig_Composto_Por --> No_Cometas[Cometas]
+    Lig_Composto_Por --> No_Estrela[Estrela]
+    Lig_Composto_Por ---> No_PlanetasAnoes[Planetas-anões]
+    Lig_Composto_Por --> No_Planetas[Planetas]
+    Lig_Composto_Por --> No_Satelites[Satélites]
+
+	No_Estrela --> Lig_Sistema_Planetario_Chamada[chamada]
+	Lig_Sistema_Planetario_Chamada --> No_Sistema_Kerbol[Kerbol]
+
+    No_Planetas ----> Lig_Planetas_Como[como]
+	Lig_Planetas_Como ---> No_Moho[Moho]
+	Lig_Planetas_Como ---> No_Eve[Eve]
+	Lig_Planetas_Como ---> No_Jool[Jool]
+	Lig_Planetas_Como ---> No_Kerbin[Kerbin]
+	Lig_Planetas_Como ---> No_Duna[Duna]
+
+    No_PlanetasAnoes ---> Lig_Planetas_Anoes_Como[como]
+	Lig_Planetas_Anoes_Como ---> No_Eeloo[Eeloo]
+	Lig_Planetas_Anoes_Como ---> No_Dres[Dres]
+	
+	No_Cometas ---> Lig_Cometas_Do_Tipo[do tipo]
+	Lig_Cometas_Do_Tipo --> No_Cometa_Tipo_F[F]
+	Lig_Cometas_Do_Tipo --> No_Cometa_Tipo_G[G]
+	Lig_Cometas_Do_Tipo --> No_Cometa_Tipo_H[H]
+	Lig_Cometas_Do_Tipo --> No_Cometa_Tipo_I[I]
+
+	No_Asteroides --> Lig_Asteroides_Do_Tipo[do tipo]
+	Lig_Asteroides_Do_Tipo --> No_Asteroides_Tipo_A[A]
+	Lig_Asteroides_Do_Tipo --> No_Asteroides_Tipo_B[B]
+	Lig_Asteroides_Do_Tipo --> No_Asteroides_Tipo_C[C]
+	Lig_Asteroides_Do_Tipo --> No_Asteroides_Tipo_D[D]
+	Lig_Asteroides_Do_Tipo --> No_Asteroides_Tipo_E[E]
+
+    No_Satelites ---> Lig_Satelites_Do_Tipo[do tipo]
+	Lig_Satelites_Do_Tipo --> No_Satelite_Tipo_Regular[Regular]
+	Lig_Satelites_Do_Tipo --> No_Satelite_Tipo_Irregular[Irregular]
+
+    No_Satelites ----> Lig_Satelites_Como[como]
+	Lig_Satelites_Como ---> No_Gilly[Gilly]
+	Lig_Satelites_Como ---> No_Mun[Mun]
+	Lig_Satelites_Como ---> No_Minmus[Minmus]
+	Lig_Satelites_Como ---> No_Ike[Ike]
+	Lig_Satelites_Como ---> No_Laythe[Laythe]
+	Lig_Satelites_Como ---> No_Vall[Vall]
+	Lig_Satelites_Como ---> No_Tylo[Tylo]
+	Lig_Satelites_Como ---> No_Bop[Bop]
+	Lig_Satelites_Como ---> No_Pol[Pol]
+
+    No_Planetas --> Lig_Planetas_Orbitam[orbitam]
+	Lig_Planetas_Orbitam --> No_Estrela
+	
+    No_PlanetasAnoes ---> Lig_PlanetasAnoes_Orbitam[orbitam]
+	Lig_PlanetasAnoes_Orbitam --> No_Estrela
+	
+    No_Cometas --> Lig_Cometas_Orbitam[orbitam]
+	Lig_Cometas_Orbitam --> No_Estrela
+
+    No_Asteroides --> Lig_Asteroides_Orbitam[orbitam]
+	Lig_Asteroides_Orbitam --> No_Estrela
+
+    style Lig_Possui_Um fill:transparent,stroke:none,stroke-width:0
+    style Lig_Composto_Por fill:transparent,stroke:none,stroke-width:0
+	style Lig_Planetas_Como fill:transparent,stroke:none,stroke-width:0
+	style Lig_Planetas_Anoes_Como fill:transparent,stroke:none,stroke-width:0
+	style Lig_Cometas_Do_Tipo fill:transparent,stroke:none,stroke-width:0
+	style Lig_Sistema_Planetario_Chamada fill:transparent,stroke:none,stroke-width:0
+	style Lig_Satelites_Do_Tipo fill:transparent,stroke:none,stroke-width:0
+	style Lig_Satelites_Como fill:transparent,stroke:none,stroke-width:0
+	style Lig_Planetas_Orbitam fill:transparent,stroke:none,stroke-width:0
+	style Lig_PlanetasAnoes_Orbitam fill:transparent,stroke:none,stroke-width:0
+	style Lig_Cometas_Orbitam fill:transparent,stroke:none,stroke-width:0
+	style Lig_Asteroides_Orbitam fill:transparent,stroke:none,stroke-width:0	
+
+</pre>
+
+</body>
+</html>

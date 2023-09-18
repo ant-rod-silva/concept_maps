@@ -16,16 +16,16 @@
     No_Raiz["CIRCUITO\nELÉTRICO"] --> Lig_Circuito_Um[é um] 
 	Lig_Circuito_Um --> No_Caminho_Fechado[caminho fechado]
 
-    No_Caminho_Fechado --> Lig_Alimentado[alimentado\npor] 
+    No_Caminho_Fechado --> Lig_Onde_Percorre[onde percorre] 
+	Lig_Onde_Percorre --> No_Corrente_Eletrica[corrente elétrica]
 
-    Lig_Alimentado --> No_Fonte_Energia[fonte de\nenergia]	
-	No_Fonte_Energia --> Lig_Fonte_Energia_Como[como]
-	Lig_Fonte_Energia_Como --> No_Bateria[bateria]
-	Lig_Fonte_Energia_Como --> No_Pilha[pilha]
+    No_Corrente_Eletrica --> Lig_Corrente_Tipo[do tipo]
+	Lig_Corrente_Tipo --> No_Corrente_Continua[contínua]
+	Lig_Corrente_Tipo --> No_Corrente_Alternada[alternada]
 	
     style Lig_Circuito_Um fill:transparent,stroke:none,stroke-width:0
-    style Lig_Alimentado fill:transparent,stroke:none,stroke-width:0
-    style Lig_Fonte_Energia_Como fill:transparent,stroke:none,stroke-width:0
+    style Lig_Onde_Percorre fill:transparent,stroke:none,stroke-width:0
+	style Lig_Corrente_Tipo fill:transparent,stroke:none,stroke-width:0
 </pre>
 
 </body>

@@ -16,6 +16,11 @@
     No_Raiz["CIRCUITO\nELÉTRICO"] --> Lig_Circuito_Um[é um] 
 	Lig_Circuito_Um --> No_Caminho_Fechado[caminho fechado]
 
+    No_Caminho_Fechado --> Lig_Caminho_tipo[do tipo] 
+    Lig_Caminho_tipo --> No_Caminho_Tipo_Serie[Série]
+    Lig_Caminho_tipo --> No_Caminho_Tipo_Paralelo[Paralelo]
+    Lig_Caminho_tipo --> No_Caminho_Tipo_Misto[Misto]
+
     No_Caminho_Fechado --> Lig_Onde_Percorre[onde percorre] 
 	Lig_Onde_Percorre --> No_Corrente_Eletrica[corrente elétrica]
 
@@ -29,6 +34,7 @@
 
 
     style Lig_Circuito_Um fill:transparent,stroke:none,stroke-width:0
+    style Lig_Caminho_tipo fill:transparent,stroke:none,stroke-width:0
     style Lig_Onde_Percorre fill:transparent,stroke:none,stroke-width:0
 	style Lig_Corrente_Tipo fill:transparent,stroke:none,stroke-width:0
 	style Lig_Sentido fill:transparent,stroke:none,stroke-width:0

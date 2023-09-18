@@ -21,8 +21,11 @@
     Lig_Caminho_tipo --> No_Caminho_Tipo_Paralelo[Paralelo]
     Lig_Caminho_tipo --> No_Caminho_Tipo_Misto[Misto]
 
-    No_Caminho_Fechado --> Lig_Onde_Percorre[onde percorre] 
+    No_Caminho_Fechado ---> Lig_Onde_Percorre[onde percorre] 
 	Lig_Onde_Percorre --> No_Corrente_Eletrica[corrente elétrica]
+
+    No_Corrente_Eletrica --> Lig_Corrente_Definicao[que é um movimento\nordenado das]
+    Lig_Corrente_Definicao --> No_Cargas_Eletricas[cargas elétricas]
 
     No_Corrente_Eletrica --> Lig_Corrente_Tipo[do tipo]
 	Lig_Corrente_Tipo --> No_Corrente_Continua[contínua]
@@ -36,6 +39,7 @@
     style Lig_Circuito_Um fill:transparent,stroke:none,stroke-width:0
     style Lig_Caminho_tipo fill:transparent,stroke:none,stroke-width:0
     style Lig_Onde_Percorre fill:transparent,stroke:none,stroke-width:0
+    style Lig_Corrente_Definicao fill:transparent,stroke:none,stroke-width:0
 	style Lig_Corrente_Tipo fill:transparent,stroke:none,stroke-width:0
 	style Lig_Sentido fill:transparent,stroke:none,stroke-width:0
 

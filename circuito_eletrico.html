@@ -26,6 +26,9 @@
 
     No_Corrente_Eletrica --> Lig_Corrente_Definicao[que é um movimento\nordenado das]
     Lig_Corrente_Definicao --> No_Cargas_Eletricas[cargas elétricas]
+	
+	No_Cargas_Eletricas --> Lig_Cargas_Eletricas_Como[como]
+	Lig_Cargas_Eletricas_Como --> No_Eletrons[elétrons]
 
     No_Corrente_Eletrica --> Lig_Corrente_Tipo[do tipo]
 	Lig_Corrente_Tipo --> No_Corrente_Continua[contínua]
@@ -40,6 +43,7 @@
     style Lig_Caminho_tipo fill:transparent,stroke:none,stroke-width:0
     style Lig_Onde_Percorre fill:transparent,stroke:none,stroke-width:0
     style Lig_Corrente_Definicao fill:transparent,stroke:none,stroke-width:0
+    style Lig_Cargas_Eletricas_Como fill:transparent,stroke:none,stroke-width:0
 	style Lig_Corrente_Tipo fill:transparent,stroke:none,stroke-width:0
 	style Lig_Sentido fill:transparent,stroke:none,stroke-width:0
 

@@ -23,9 +23,16 @@
 	Lig_Corrente_Tipo --> No_Corrente_Continua[contínua]
 	Lig_Corrente_Tipo --> No_Corrente_Alternada[alternada]
 	
+    No_Corrente_Eletrica --> Lig_Sentido[de sentido]
+	Lig_Sentido --> No_Sentido_Real[real]
+	Lig_Sentido --> No_Sentido_Convencional[convencional]
+
+
     style Lig_Circuito_Um fill:transparent,stroke:none,stroke-width:0
     style Lig_Onde_Percorre fill:transparent,stroke:none,stroke-width:0
 	style Lig_Corrente_Tipo fill:transparent,stroke:none,stroke-width:0
+	style Lig_Sentido fill:transparent,stroke:none,stroke-width:0
+
 </pre>
 
 </body>

@@ -27,11 +27,22 @@
 	No_Corrente_Eletrica --> Lig_Corrente_Eletrica_Transportada[transportada por]
 	Lig_Corrente_Eletrica_Transportada --> No_Condutores[condutores]
 
-    No_Corrente_Eletrica --> Lig_Corrente_Definicao[que é um movimento\nordenado das]
-    Lig_Corrente_Definicao --> No_Cargas_Eletricas[cargas elétricas]
+    No_Corrente_Eletrica --> Lig_Corrente_Definicao[que é um]
+	Lig_Corrente_Definicao --> No_Movimento_Ordenado[movimento\nordenado]
+
+	No_Movimento_Ordenado --> Lig_Movimento_Ordenado_De[de]
+    Lig_Movimento_Ordenado_De --> No_Cargas_Eletricas[cargas elétricas]
+	No_Movimento_Ordenado --> Lig_Movimento_Ordenado_Provocado[provocado por]
+    Lig_Movimento_Ordenado_Provocado --> No_Fonte_Energia[fonte de energia]
+	No_Fonte_Energia --> Lig_Fonte_Energia_Como[como]
+	Lig_Fonte_Energia_Como --> No_Pilha[pilha]
+	Lig_Fonte_Energia_Como --> No_Bateria[bateria]
 	
 	No_Cargas_Eletricas --> Lig_Cargas_Eletricas_Como[como]
 	Lig_Cargas_Eletricas_Como --> No_Eletrons[elétrons]
+	
+	No_Fonte_Energia --> Lig_Fonte_Energia_Movimenta[movimenta]
+	Lig_Fonte_Energia_Movimenta --> No_Cargas_Eletricas
 	
 	No_Eletrons --> Lig_Eletrons_Presente[presente nos]
 	Lig_Eletrons_Presente --> No_Metais[metais]
@@ -49,11 +60,16 @@
     style Lig_Caminho_tipo fill:transparent,stroke:none,stroke-width:0
     style Lig_Onde_Percorre fill:transparent,stroke:none,stroke-width:0
     style Lig_Corrente_Definicao fill:transparent,stroke:none,stroke-width:0
+    style Lig_Movimento_Ordenado_De fill:transparent,stroke:none,stroke-width:0
+    style Lig_Movimento_Ordenado_Provocado fill:transparent,stroke:none,stroke-width:0
     style Lig_Cargas_Eletricas_Como fill:transparent,stroke:none,stroke-width:0
     style Lig_Eletrons_Presente fill:transparent,stroke:none,stroke-width:0
 	style Lig_Corrente_Tipo fill:transparent,stroke:none,stroke-width:0
 	style Lig_Sentido fill:transparent,stroke:none,stroke-width:0
 	style Lig_Corrente_Eletrica_Transportada fill:transparent,stroke:none,stroke-width:0
+	style Lig_Fonte_Energia_Como fill:transparent,stroke:none,stroke-width:0
+	style Lig_Fonte_Energia_Movimenta fill:transparent,stroke:none,stroke-width:0
+
 </pre>
 
 </body>

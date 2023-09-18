@@ -15,9 +15,13 @@
   graph TB
     No_Raiz["CIRCUITO\nELÉTRICO"] --> Lig_Alimentado[é alimentado\npor] 
 
-    Lig_Alimentado --> No_Fonte_Energia[fonte de\nenergia]
+    Lig_Alimentado --> No_Fonte_Energia[fonte de\nenergia]	
+	No_Fonte_Energia --> Lig_Fonte_Energia_Como[como]
+	Lig_Fonte_Energia_Como --> No_Bateria[bateria]
+	Lig_Fonte_Energia_Como --> No_Pilha[pilha]
 	
     style Lig_Alimentado fill:transparent,stroke:none,stroke-width:0
+    style Lig_Fonte_Energia_Como fill:transparent,stroke:none,stroke-width:0
 </pre>
 
 </body>
